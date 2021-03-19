@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revision JS</title>
+  </head>
+  <body>
+    <script>
+      //Write a javaScript function that prints the sum of the numbers 1 to 10, using a while loop
+
+      let x = 1;
+      while (x <= 10) {
+        console.log(x);
+        x++;
+      }
+
+      //Write a javaScript function that prints a multiplication table for number 10
+
+      for (let a = 1; a <= 10; a++) {
+        for (let b = 1; b <= 10; b++) {
+          console.log(a + "*" + b + " = " + a * b);
+        }
+      }
+
+      //Write a javaScript function that returns the largest element in an array
+      //   console.log(Math.max(5, 8, 66, 1 , 40, 13, 27));
+      let numbers = [5, 8, 66, 1, 40, 13, 27];
+      console.log(Math.max.apply(null, numbers)); //way 2
+
+      //Write a javaScript function that reverses an array
+
+      let months = ["April", "May", "June", "July", "August"];
+      let = months.reverse();
+      console.log(months);
+
+      //Write a javaScript function that returns the elements on even index in an array
+      //    let names = ['Lara', 'Boran', 'Dana', 'Renad', 'Remas'];
+      //    for (var i = 0; i < names.length; i++) {
+      //         if (names[i] % 2 === 0) {
+      //            console.log(names[i] + "<br />");
+      //         }
+      //     }
+      //    console.log(names[0]);
+
+      //Write a javaScript function that compute the sum of the numbers in an array, using a for-loop
+
+      var num = [10, 20, 30, 40];
+      var sum = 0;
+      for (var i = 0; i < num.length; i++) {
+        console.log((sum += num[i]));
+      }
+
+      //Write a javaScript function that concatenates two arrays
+
+      var type = ["Hp", "Dell"];
+      var color = ["Black", "Gray", "White"];
+      var Laptop = type.concat(color);
+      console.log(Laptop);
+
+      //Write a javaScript function that sorts an array
+      var Cats = ["Norwegian", "Chinchilla", "Maine Coon", "Australian"];
+      console.log(Cats.sort());
+
+      //Write a javaScript function that sorts an array
+      let numb = [8, 0, 1, 5, 3];
+      console.log(numb.sort());
+
+      //Write a javaScript function that counts the number of vowel letters in the string
+      function vowel_count(str1) {
+        var vowel_list = "lorai";
+        var vcount = 0;
+
+        for (var x = 0; x < str1.length; x++) {
+          if (vowel_list.indexOf(str1[x]) !== -1) {
+            vcount += 1;
+          }
+        }
+        return vcount;
+      }
+      console.log(vowel_count("The quick brown fox"));
+
+      //Write a javaScript function that checks numbers and put even and odd numbers in two different araays
+
+      function getEvenNumbers() {
+        var arr = [10, 5, 3, 8, 1, 6, 9];
+
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            console.log("Even Number " + arr[i]);
+          } else {
+            console.log("odd Number " + arr[i]);
+          }
+        }
+      }
+      getEvenNumbers();
+
+      //Write a javaScript function that calculates the factorial of any number
+      function factorial(n) {
+        let answer = 1;
+        if (n == 0 || n == 1) {
+          return answer;
+        } else {
+          for (var i = n; i >= 1; i--) {
+            answer = answer * i;
+          }
+          return answer;
+        }
+      }
+      let n = 4;
+      answer = factorial(n);
+      console.log("The factorial of " + n + " is " + answer);
+
+      //Write a javaScript function that finds the second minmum number of an array
+      let arr1 = [10, 5, 3, 8, 1, 6, 9];
+      console.log(Math.min.apply(null, arr1));
+
+      //Write a javaScript function that compares the length of words in an array and returns the longest word with length
+
+      //   const animals = words => Math.max(...(words.map(el => el.length)));
+      //   let animals =(['Horse', 'Cat', 'Giraffe']);
+      //   console.log(animals.length);
+
+      function longest_string(str_ara) {
+        var max = str_ara[0].length;
+        str_ara.map((v) => (max = Math.max(max, v.length)));
+        result = str_ara.filter((v) => v.length == max);
+        return result;
+      }
+      console.log(longest_string(['Horse', 'Cat', 'Giraffe']));
+    </script>
+  </body>
+</html>
